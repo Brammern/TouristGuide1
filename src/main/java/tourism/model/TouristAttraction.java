@@ -1,10 +1,10 @@
 package tourism.model;
 
-public class touristAttraction {
+public class TouristAttraction {
     private String name;
     private String description;
 
-    public touristAttraction(String name, String description) {
+    public TouristAttraction(String name, String description) {
         this.name = name;
         this.description = description;
     }
