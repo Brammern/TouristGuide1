@@ -2,34 +2,34 @@ package tourism.repository;
 
 
 import org.springframework.stereotype.Repository;
-import tourism.model.touristAttraction;
+import tourism.model.TouristAttraction;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class touristRepository {
-    private final List<touristAttraction> attractions = new ArrayList<>();
+public class TouristRepository {
+    private final List<TouristAttraction> attractions = new ArrayList<>();
 
 
-    public touristRepository() {
-        attractions.add(new touristAttraction("Tivoli ",
+    public TouristRepository() {
+        attractions.add(new TouristAttraction("Tivoli ",
                 "An amusement park in the middle of Copenhagen"));
 
-        attractions.add(new touristAttraction("The Little Mermaid Statue ",
+        attractions.add(new TouristAttraction("The Little Mermaid Statue ",
                 "A statue depicting the little mermaid"));
 
-        attractions.add(new touristAttraction("Rosenborg Castle",
+        attractions.add(new TouristAttraction("Rosenborg Castle",
                 "A renaissance castle built in the early 1600s"));
     }
 
-    public List<touristAttraction> getAllAttractions() {
+    public List<TouristAttraction> getAllAttractions() {
         return new ArrayList<>(attractions);
     }
 
 
-    public touristAttraction getAttractionByName(String name) {
-        for (touristAttraction attraction : attractions) {
+    public TouristAttraction getAttractionByName(String name) {
+        for (TouristAttraction attraction : attractions) {
             if (attraction.getName().equalsIgnoreCase(name)) {
                 return attraction;
             }
@@ -38,12 +38,12 @@ public class touristRepository {
     }
 
 
-    public void addAttraction(touristAttraction attraction) {
+    public void addAttraction(TouristAttraction attraction) {
         attractions.add(attraction);
     }
 
 
-    public boolean updateAttraction(String name, touristAttraction updatedAttraction) {
+    public boolean updateAttraction(String name, TouristAttraction updatedAttraction) {
         for (int i = 0; i < attractions.size(); i++) {
             if (attractions.get(i).getName().equalsIgnoreCase(name)) {
                 attractions.set(i, updatedAttraction);
