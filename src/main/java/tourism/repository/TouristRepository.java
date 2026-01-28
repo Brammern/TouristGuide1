@@ -24,7 +24,7 @@ public class TouristRepository {
     }
 
     public List<TouristAttraction> getAllAttractions() {
-        return new ArrayList<>(attractions);
+        return attractions;
     }
 
 
@@ -38,19 +38,20 @@ public class TouristRepository {
     }
 
 
-    public void addAttraction(TouristAttraction attraction) {
+    public TouristAttraction addAttraction(TouristAttraction attraction) {
         attractions.add(attraction);
+        return attraction;
     }
 
 
-    public boolean updateAttraction(String name, TouristAttraction updatedAttraction) {
+    public TouristAttraction updateAttraction(TouristAttraction updatedAttraction) {
         for (int i = 0; i < attractions.size(); i++) {
-            if (attractions.get(i).getName().equalsIgnoreCase(name)) {
+            if (attractions.get(i).getName() == updatedAttraction.getName()) {
                 attractions.set(i, updatedAttraction);
-                return true;
+                return updatedAttraction;
             }
         }
-        return false;
+        return null;
     }
 
 

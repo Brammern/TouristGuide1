@@ -5,7 +5,6 @@ import tourism.repository.TouristRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TouristService {
@@ -19,7 +18,7 @@ public class TouristService {
         return repository.getAllAttractions();
     }
 
-    public Optional<TouristAttraction> getAttractionByName(String name) {
+    public TouristAttraction getAttractionByName(String name) {
         return repository.getAttractionByName(name);
     }
 
@@ -27,8 +26,8 @@ public class TouristService {
         return repository.addAttraction(attraction);
     }
 
-    public Optional<TouristAttraction> updateAttraction(String name, TouristAttraction updatedAttraction) {
-        return repository.updateAttraction(name, updatedAttraction);
+    public TouristAttraction updateAttraction(TouristAttraction updatedAttraction) {
+        return repository.updateAttraction(updatedAttraction);
     }
 
     public boolean deleteAttraction(String name) {
