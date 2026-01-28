@@ -13,7 +13,7 @@ public class TouristRepository {
 
 
     public TouristRepository() {
-        attractions.add(new TouristAttraction("Tivoli ",
+        attractions.add(new TouristAttraction("Tivoli",
                 "An amusement park in the middle of Copenhagen"));
 
         attractions.add(new TouristAttraction("The Little Mermaid Statue ",
@@ -46,7 +46,7 @@ public class TouristRepository {
 
     public TouristAttraction updateAttraction(TouristAttraction updatedAttraction) {
         for (int i = 0; i < attractions.size(); i++) {
-            if (attractions.get(i).getName() == updatedAttraction.getName()) {
+            if (attractions.get(i).getName().equals(updatedAttraction.getName())) {
                 attractions.set(i, updatedAttraction);
                 return updatedAttraction;
             }
@@ -55,13 +55,13 @@ public class TouristRepository {
     }
 
 
-    public boolean deleteAttraction(String name) {
-        for (int i = 0; i < attractions.size(); i++) {
-            if (attractions.get(i).getName().equalsIgnoreCase(name)) {
-                attractions.remove(i);
-                return true;
+    public TouristAttraction deleteAttraction(String name) {
+        for (TouristAttraction t : attractions) {
+            if (t.getName().equals(name)) {
+                attractions.remove(t);
+                return t;
             }
         }
-        return false;
+        return null;
     }
 }

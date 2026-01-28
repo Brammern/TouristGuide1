@@ -30,7 +30,7 @@ public class TouristService {
         return repository.updateAttraction(updatedAttraction);
     }
 
-    public boolean deleteAttraction(String name) {
+    public TouristAttraction deleteAttraction(String name) {
         return repository.deleteAttraction(name);
     }
 }
