@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="styles.css">
+    <title>Turistguide – København</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
+<nav>
+    <ul>
+        <li><a href="/">Hjem</a></li>
+        <li><a href="/attractions">Alle attraktioner (JSON)</a></li>
+        <li><a href="/attractions/Tivoli">Tivoli (JSON)</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Velkommen til Turistguiden</h1>
+    <p>Din digitale guide til spændende turistattraktioner i København.</p>
+</header>
+
+<main>
+    <section>
+        <h2>Om turistguiden</h2>
+        <p>
+            Denne turistguide giver et overblik over populære seværdigheder i København.
+            Guiden er målrettet turister, studerende og andre nysgerrige sjæle, der vil
+            udforske byen – både kultur, historie og oplevelser.
+        </p>
+    </section>
+
+    <section>
+        <h2>Populære attraktioner</h2>
+        <ul>
+            <li>Tivoli</li>
+            <li>Den Lille Havfrue</li>
+            <li>Rosenborg Slot</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Eksterne links</h2>
+        <ul>
+            <li>
+                <a href="https://www.visitcopenhagen.dk" target="_blank">
+                    Visit Copenhagen
+                </a>
+            </li>
+            <li>
+                <a href="https://dinoffentligetransport.dk" target="_blank">
+                    Offentlig transport / City Pass
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Se data fra API</h2>
+        <p>Disse links viser data direkte fra API’et i JSON-format:</p>
+        <ul>
+            <li><a href="/attractions">Alle turistattraktioner</a></li>
+            <li><a href="/attractions/Tivoli">Se Tivoli</a></li>
+        </ul>
+    </section>
+
+    <img src="images/copenhagen.jpg" alt="København skyline">
+</main>
+
+<footer>
+    <p>Kontakt: touristguide@demo.dk | Tlf: 12 34 56 78</p>
+</footer>
 
 </body>
 </html>
